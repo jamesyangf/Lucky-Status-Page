@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="promotionsCSS.css">
+    <link rel="stylesheet" href="../modal/css/jquery.modal.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../modal/js/jquery.modal.min.js"></script>
+</head>
+<body>
+    <h1 class="title">Promotions</h1>
+
+      <div class="tab-container">
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'None')">None</button>
+          <button class="tablinks" onclick="openCity(event, 'Low')">Low</button>
+          <button class="tablinks" onclick="openCity(event, 'Medium')">Medium</button>
+          <button class="tablinks" onclick="openCity(event, 'High')">High</button>
+          <button class="tablinks" onclick="openCity(event, 'Critical')">Critical</button>
+        </div>
+      </div>
+
+      <!-- <div id="tableDiv" class="tabcontent">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+      </div> -->
+
+    <section>
+      <h1 class="section-header">Tickets</h1>
+
+      <div id="tableDivNone" class="tabcontent">
+        <div class="tbl-header">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Owner</th>
+                <th>Email</th>
+                <th>Created At</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0" class="ticket-table">
+            <tbody class="ticketBody">
+            <div class="error_container" id="column_14336">
+                  <div class="field_block">
+                      <div class="error">Error Retrieving Tickets</div> 
+                       <div class="field">
+                          <span>
+                              <input type="submit" value="Retry" name="11232" onclick="location.reload()" >
+                          </span>
+                       </div>
+                  </div>
+              </div>
+              <!-- Pending Icon  -->
+                  <div class="hint">Fetching Tickets</div>
+                  <div class="sk-circle">
+                    <div class="sk-circle1 sk-child"></div>
+                    <div class="sk-circle2 sk-child"></div>
+                    <div class="sk-circle3 sk-child"></div>
+                    <div class="sk-circle4 sk-child"></div>
+                    <div class="sk-circle5 sk-child"></div>
+                    <div class="sk-circle6 sk-child"></div>
+                    <div class="sk-circle7 sk-child"></div>
+                    <div class="sk-circle8 sk-child"></div>
+                    <div class="sk-circle9 sk-child"></div>
+                    <div class="sk-circle10 sk-child"></div>
+                    <div class="sk-circle11 sk-child"></div>
+                    <div class="sk-circle12 sk-child"></div>
+                  </div>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div id="tableDivLow" class="tabcontent">
+        <div class="tbl-header">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Owner</th>
+                <th>Email</th>
+                <th>Created At</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0" class="ticket-table">
+            <tbody class="ticketBody">
+            <div class="error_container" id="column_14336">
+                  <div class="field_block">
+                      <div class="error">Error Retrieving Tickets</div> 
+                       <div class="field">
+                          <span>
+                              <input type="submit" value="Retry" name="11232" onclick="location.reload()" >
+                          </span>
+                       </div>
+                  </div>
+              </div>
+              <!-- Pending Icon  -->
+                  <div class="hint">Fetching Tickets</div>
+                  <div class="sk-circle">
+                    <div class="sk-circle1 sk-child"></div>
+                    <div class="sk-circle2 sk-child"></div>
+                    <div class="sk-circle3 sk-child"></div>
+                    <div class="sk-circle4 sk-child"></div>
+                    <div class="sk-circle5 sk-child"></div>
+                    <div class="sk-circle6 sk-child"></div>
+                    <div class="sk-circle7 sk-child"></div>
+                    <div class="sk-circle8 sk-child"></div>
+                    <div class="sk-circle9 sk-child"></div>
+                    <div class="sk-circle10 sk-child"></div>
+                    <div class="sk-circle11 sk-child"></div>
+                    <div class="sk-circle12 sk-child"></div>
+                  </div>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div id="tableDivMedium" class="tabcontent">
+        <div class="tbl-header">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Owner</th>
+                <th>Email</th>
+                <th>Created At</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0" class="ticket-table">
+            <tbody class="ticketBody">
+            <div class="error_container" id="column_14336">
+                  <div class="field_block">
+                      <div class="error">Error Retrieving Tickets</div> 
+                       <div class="field">
+                          <span>
+                              <input type="submit" value="Retry" name="11232" onclick="location.reload()" >
+                          </span>
+                       </div>
+                  </div>
+              </div>
+              <!-- Pending Icon  -->
+                  <div class="hint">Fetching Tickets</div>
+                  <div class="sk-circle">
+                    <div class="sk-circle1 sk-child"></div>
+                    <div class="sk-circle2 sk-child"></div>
+                    <div class="sk-circle3 sk-child"></div>
+                    <div class="sk-circle4 sk-child"></div>
+                    <div class="sk-circle5 sk-child"></div>
+                    <div class="sk-circle6 sk-child"></div>
+                    <div class="sk-circle7 sk-child"></div>
+                    <div class="sk-circle8 sk-child"></div>
+                    <div class="sk-circle9 sk-child"></div>
+                    <div class="sk-circle10 sk-child"></div>
+                    <div class="sk-circle11 sk-child"></div>
+                    <div class="sk-circle12 sk-child"></div>
+                  </div>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div id="tableDivHigh" class="tabcontent">
+        <div class="tbl-header">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Owner</th>
+                <th>Email</th>
+                <th>Created At</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0" class="ticket-table">
+            <tbody class="ticketBody">
+            <div class="error_container" id="column_14336">
+                  <div class="field_block">
+                      <div class="error">Error Retrieving Tickets</div> 
+                       <div class="field">
+                          <span>
+                              <input type="submit" value="Retry" name="11232" onclick="location.reload()" >
+                          </span>
+                       </div>
+                  </div>
+              </div>
+              <!-- Pending Icon  -->
+                  <div class="hint">Fetching Tickets</div>
+                  <div class="sk-circle">
+                    <div class="sk-circle1 sk-child"></div>
+                    <div class="sk-circle2 sk-child"></div>
+                    <div class="sk-circle3 sk-child"></div>
+                    <div class="sk-circle4 sk-child"></div>
+                    <div class="sk-circle5 sk-child"></div>
+                    <div class="sk-circle6 sk-child"></div>
+                    <div class="sk-circle7 sk-child"></div>
+                    <div class="sk-circle8 sk-child"></div>
+                    <div class="sk-circle9 sk-child"></div>
+                    <div class="sk-circle10 sk-child"></div>
+                    <div class="sk-circle11 sk-child"></div>
+                    <div class="sk-circle12 sk-child"></div>
+                  </div>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div id="tableDivCritical" class="tabcontent">
+        <div class="tbl-header">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Owner</th>
+                <th>Email</th>
+                <th>Created At</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0" class="ticket-table">
+            <tbody class="ticketBody">
+            <div class="error_container" id="column_14336">
+                  <div class="field_block">
+                      <div class="error">Error Retrieving Tickets</div> 
+                       <div class="field">
+                          <span>
+                              <input type="submit" value="Retry" name="11232" onclick="location.reload()" >
+                          </span>
+                       </div>
+                  </div>
+              </div>
+              <!-- Pending Icon  -->
+                  <div class="hint">Fetching Tickets</div>
+                  <div class="sk-circle">
+                    <div class="sk-circle1 sk-child"></div>
+                    <div class="sk-circle2 sk-child"></div>
+                    <div class="sk-circle3 sk-child"></div>
+                    <div class="sk-circle4 sk-child"></div>
+                    <div class="sk-circle5 sk-child"></div>
+                    <div class="sk-circle6 sk-child"></div>
+                    <div class="sk-circle7 sk-child"></div>
+                    <div class="sk-circle8 sk-child"></div>
+                    <div class="sk-circle9 sk-child"></div>
+                    <div class="sk-circle10 sk-child"></div>
+                    <div class="sk-circle11 sk-child"></div>
+                    <div class="sk-circle12 sk-child"></div>
+                  </div>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+</body>
+
+<script type="text/javascript" src="promotionsTab.js"></script>

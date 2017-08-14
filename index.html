@@ -1,0 +1,431 @@
+<!-- James Yang -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="LogoWrapper">
+    <img src="img/SplashPage_Logo_03.png" alt="Lucky Brand Logo">
+</div>
+
+<section>
+	<h1 class="section-header"> System Statuses </h1>
+	<form action="AddTicket.html">
+		<input type="submit" value="Create a Ticket" class="btn btn-navy btn-border-o">
+ 	</form>
+
+    <ul class="list">
+	    <div>
+	        <div class="header_container direct">
+	        	<i id="icon_plus" class="fa fa-plus-square-o"></i>
+	    		<i id="icon_minus" class="fa fa-minus-square-o" style="display: none"></i>
+	        	<strong>Lucky Direct</strong>
+	        	<div class="pull-right direct">
+	        		Operational
+	        	</div>
+	        </div>
+	        <div class="item_group">
+	        	
+	            <a href="Boris/boris.html"><div class=item_container>
+	            	Boris
+	            	<div class="pull-right direct1">
+	        			Operational
+	        		</div>
+	            </div></a>
+	            
+	            <a href="LDOrder/ldorder.html"><div class=item_container>
+	            	LD Order Allocation
+	            	<div class="pull-right direct2">
+	        			Operational
+	        		</div>
+	            </div></a>
+	          
+	            <a href="Pickup/pickup.html"><div class=item_container>
+	            	In Store Pickup
+	            	<div class="pull-right direct3">
+	        			Operational
+	        		</div>
+	            </div></a>
+	        </div>                
+	    </div>
+	</ul>
+
+	<ul class="list">
+	    <div>
+	        <div class="header_container sale">
+	        	<i id="icon_plus" class="fa fa-plus-square-o"></i>
+	    		<i id="icon_minus" class="fa fa-minus-square-o" style="display: none"></i>
+	        	<strong>Point of Sale Systems</strong>
+	        	<div class="pull-right sale">
+	        		Operational
+	        	</div>
+	        </div>
+	        <div class="item_group">
+	        	
+	            <a href="MiStore/mistore.html"><div class=item_container>
+	            	MiStore Devices
+	            	<div class="pull-right sale1">
+	        			Operational
+	        		</div>
+	            </div></a>
+	            
+	            <a href="Promotions/promotions.html"><div class=item_container>
+	            	Promotions
+	            	<div class="pull-right sale2">
+	        			Operational
+	        		</div>
+	            </div></a>
+	          
+	            <a href="Pricing/pricing.html"><div class=item_container>
+	            	Pricing
+	            	<div class="pull-right sale3">
+	        			Operational
+	        		</div>
+	            </div></a>
+	        </div>                
+	    </div>
+	</ul>
+
+	<ul class="list">
+	    <div>
+	        <div class="header_container sale">
+	        	<i id="icon_plus" class="fa fa-plus-square-o"></i>
+	    		<i id="icon_minus" class="fa fa-minus-square-o" style="display: none"></i>
+	        	<strong>Ecommerce</strong>
+	        	<div class="pull-right ecom">
+	        		Operational
+	        	</div>
+	        </div>
+	        <div class="item_group">
+	        	
+	            <a href="EcomSys/ecom.html"><div class=item_container>
+	            	Ecommerce Systems
+	            	<div class="pull-right ecom1">
+	        			Operational
+	        		</div>
+	            </div></a>
+
+	            <a href="Orders/orders.html"><div class=item_container>
+	            	Orders & Order Statuses
+	            	<div class="pull-right ecom2">
+	        			Operational
+	        		</div>
+	            </div></a>
+
+	            <a href="LuckyBrand_com/luckybrand.html"><div class=item_container>
+	            	www.LuckyBrand.com
+	            	<div class="pull-right ecom3">
+	        			Operational
+	        		</div>
+	            </div></a>
+	        </div>                
+	    </div>
+	</ul>
+
+	<ul class="list">
+	    <div>
+	        <div class="header_container sale">
+	        	<i id="icon_plus" class="fa fa-plus-square-o"></i>
+	    		<i id="icon_minus" class="fa fa-minus-square-o" style="display: none"></i>
+	        	<strong>Corporate Systems</strong>
+	        	<div class="pull-right corp">
+	        		Operational
+	        	</div>
+	        </div>
+	        <div class="item_group">
+	        	
+	            <a href="Manhattan/manhattan.html"><div class=item_container>
+	            	Manhattan Molecule
+	            	<div class="pull-right corp1">
+	        			Operational
+	        		</div>
+	            </div></a>
+
+	            <a href="ASNtoGSI/ASNtoGSI.html"><div class=item_container>
+	            	ASN's to GSI
+	            	<div class="pull-right corp2">
+	        			Operational
+	        		</div>
+	            </div></a>
+	        </div>                
+	    </div>
+	</ul>
+
+</section>
+
+
+<!-- <section>
+  <h1 class="section-header">OpsGenie Tickets</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Message</th>
+          <th>Status</th>
+          <th>Owner</th>
+          <th>Team</th>
+          <th>Created At</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody class="OpsGenie">
+      </tbody>
+    </table>
+  </div>
+</section> -->
+
+<style> 
+	ul div .item_group {
+	    display: none;
+	} 
+</style>
+
+<script>
+	$('.list > div .header_container').click(function() {
+	    $(this).parent().find('.item_group').toggle();
+	    $(this).parent().find("#icon_plus").toggle();
+	    $(this).parent().find("#icon_minus").toggle();
+
+	});
+
+	function statusLuckyDirect() {
+		var good = "Operational";
+		var partial = "Partial Outage";
+		var maint = "Under Maintenance";
+		var degraded = "Degraded Performance";
+		var major = "Major Outage";
+
+		var boris = $(".pull-right.direct1").text().trim();
+		console.log(boris);
+		var LD = $(".pull-right.direct2").text().trim();
+		var inStore = $(".pull-right.direct3").text().trim();
+
+		if(LD == good && boris == good && inStore == good) {
+			$(".pull-right.direct").text(good);
+			$(".pull-right.direct").css('color', '#7ED321');
+		}
+		else if(LD == partial || boris == partial || inStore == partial) {
+			$(".pull-right.direct").text(partial);
+			$(".pull-right.direct").css('color', '#e67e22');
+		}
+	}
+
+	function statusPOS() {
+		var good = "Operational";
+		var partial = "Partial Outage";
+
+		var boris = $(".pull-right.sale1").text().trim();
+		var LD = $(".pull-right.sale2").text().trim();
+		var inStore = $(".pull-right.sale3").text().trim();
+
+		if(LD == good && boris == good && inStore == good) {
+			$(".pull-right.sale").text(good);
+			$(".pull-right.sale").css('color', '#7ED321');
+		}
+		else if(LD == partial || boris == partial || inStore == partial) {
+			$(".pull-right.sale").text(partial);
+			$(".pull-right.sale").css('color', '#e67e22');
+		}
+	}
+
+	function statusEcom() {
+		var good = "Operational";
+		var partial = "Partial Outage";
+
+		var boris = $(".pull-right.ecom1").text().trim();
+		var LD = $(".pull-right.ecom2").text().trim();
+		var inStore = $(".pull-right.ecom3").text().trim();
+
+		if(LD == good && boris == good && inStore == good) {
+			$(".pull-right.ecom").text(good);
+			$(".pull-right.ecom").css('color', '#7ED321');
+		}
+		else if(LD == partial || boris == partial || inStore == partial) {
+			$(".pull-right.ecom").text(partial);
+			$(".pull-right.ecom").css('color', '#e67e22');
+		}
+	}
+
+	function statusCorp() {
+		var good = "Operational";
+		var partial = "Partial Outage";
+
+		var boris = $(".pull-right.corp1").text().trim();
+		var LD = $(".pull-right.corp2").text().trim();
+		var inStore = $(".pull-right.corp3").text().trim();
+
+		if(LD == good && boris == good && inStore == good) {
+			$(".pull-right.corp").text(good);
+			$(".pull-right.corp").css('color', '#7ED321');
+		}
+		else if(LD == partial || boris == partial || inStore == partial) {
+			$(".pull-right.corp").text(partial);
+			$(".pull-right.corp").css('color', '#e67e22');
+		}
+	}
+
+	var object;
+	var table1 = $(".OpsGenie");
+
+	function getStatus(acknowledged) {
+		if(acknowledged == false) {
+			return "Open";
+		} else {
+			return "Ack'ed";
+		}
+	}
+
+	function alertType(message, i) {
+		if((message.indexOf("Critical alert:")) != -1) {
+			$("#row"+i).css('background-color','#b01801');
+		} else if(message.indexOf("Medium alert:") != -1) {
+			$("#row"+i).css('background-color', '#ffb027');
+		} else if(message.indexOf("Low alert:") != -1) {
+			$("#row"+i).css('background-color', '#59ad19');
+		} else {
+			$("#row"+i).css('background', '-webkit-linear-gradient(left, #25c481, #25b7c4)');
+			$("#row"+i).css('background', 'linear-gradient(to right, #25c481, #25b7c4)');
+		}
+	}
+
+	function addRow(i) {
+		return "row"+i;
+	}
+
+
+	function getCriticals() {
+		var xhr = new XMLHttpRequest();
+
+		var borisMatch = ["Boris", "boris"];
+		var ecomMatch = ["Ecom", "ecom", "Ecommerce", "ecommerce", "eCommerce"];
+		var ldorderMatch = ["Allocation", "allocation", "Alloc", "alloc"];
+		var luckybrandMatch = ["Site", "site", "website", "Website", "www.LuckyBrand.com"];
+		var manhattanMatch = ["Atom", "atom", "Manhattan", "manhattan", "Molecule", "molecule"];
+		var mistoreMatch = ["MiStore", "mistore"];
+		var ordersMatch = ["Order", "order"];
+		var pickupMatch = ["Pickup", "pickup"];
+		var pricingMatch = ["Pricing", "pricing", "Price", "price"];
+		var promotionsMatch = ["Promotion", "promotion", "Clearance", "clearance", "Tax Free", "tax free", "Discount", "discount", "promo", "Promo", "Markdown", "markdown"];
+
+
+		xhr.addEventListener("readystatechange", function () {
+		  if (this.readyState === 4) {
+		  	if(this.status == 200) {
+		  		object = JSON.parse(this.responseText);
+		  		
+		  		for(let incident of object) {
+		  			var name = incident.name;
+		  			var description = incident.description_no_html;
+
+		  			// Checks if the critical ticket matches any of these catagories, if it does set to partial outage
+		  			if(setStatuses(borisMatch, name, description, ".pull-right.direct1")) {
+
+		  			}
+		  			else if(setStatuses(ecomMatch, name, description, ".pull-right.ecom1")) {
+
+		  			}
+		  			else if(setStatuses(ldorderMatch, name, description, ".pull-right.direct2")) {
+
+		  			}
+		  			else if(setStatuses(luckybrandMatch, name, description, ".pull-right.ecom3")) {
+
+		  			}
+		  			else if(setStatuses(manhattanMatch, name, description, ".pull-right.corp1")) {
+
+		  			}
+		  			else if(setStatuses(mistoreMatch, name, description, ".pull-right.sale1")) {
+
+		  			}
+					else if(setStatuses(ordersMatch, name, description, ".pull-right.ecom2")) {
+
+					}
+					else if(setStatuses(pickupMatch, name, description, ".pull-right.direct3")) {
+
+					}
+					else if(setStatuses(pricingMatch, name, description, ".pull-right.sale3")) {
+
+					}
+					else if(setStatuses(promotionsMatch, name, description, ".pull-right.sale2")) {
+
+					}
+		  		}
+
+		  		// Update the status on header
+		  		statusLuckyDirect();
+		  		statusPOS();
+		  		statusEcom();
+		  		statusCorp();
+
+		  	} else {
+		  		console.log("Not successful status!");
+		  	}
+		  }
+		});
+
+		xhr.open("GET", "https://xalsmz1aph.execute-api.us-east-2.amazonaws.com/Test/criticalpriority", true); // Original
+
+		xhr.send();
+	}
+
+
+	function setStatuses(match, name, description, status) {
+
+		for(var i = 0; i < match.length; i++) {
+			if(name.indexOf(match[i]) != -1 || description.indexOf(match[i]) != -1) {
+				$(status).text("Partial Outage");
+				$(status).css('color', '#e67e22');
+				return true;
+			}
+		}
+		return false;
+	}
+
+	getCriticals();
+
+	// function restCall() {
+
+	// 	var xhr = new XMLHttpRequest();
+
+	// 	xhr.addEventListener("readystatechange", function () {
+	// 	  if (this.readyState === 4) {
+	// 	  	if(this.status == 200) {
+	// 	  		object = JSON.parse(this.responseText);
+	// 	  		console.log(object);
+	// 	  		var i = 0;
+	// 	  		for(let alert of object.alerts) {
+	// 	  			if(alert.owner != "") {
+	// 		  			var d = new Date(alert.createdAt/1000000);
+	// 		  			table1.append('<tr id='+addRow(i) +'><td class="message">'+alert.message+'</td><td>'+getStatus(alert.acknowledged)+'</td><td>'+alert.owner+'</td><td>'+alert.teams[0]+'</td><td>'+d+'</td></tr>');
+	// 		  			alertType(alert.message,i)
+	// 		  			i++;
+	// 		  		}
+	// 	  		}
+	// 	  	} else {
+	// 	  		console.log("Not successful status!");
+	// 	  	}
+	// 	  }
+	// 	});
+
+	// 	xhr.open("GET", "https://zawtqg3frl.execute-api.us-east-2.amazonaws.com/Test", true); // Original
+
+	// 	//var key = "ec6761c0-3f5c-4a89-b8a6-d39e18f26fe5";
+	// 	//xhr.setRequestHeader('Authorization','GenieKey ' + key);
+
+	// 	//xhr.setRequestHeader("content-type", "text/xml");
+	// 	xhr.send();
+	// }
+
+	// restCall();
+
+</script>
+
+</body>
+</html>
