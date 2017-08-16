@@ -1,0 +1,499 @@
+<!-- James Yang -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="LogoWrapper">
+    <img src="img/SplashPage_Logo_03.png" alt="Lucky Brand Logo">
+</div>
+
+<section>
+	<h1 class="section-header"> Edit System Statuses </h1>
+	<p> NOTE: Cannot override "Under Maintenance" with "Operational", please fix Critical ticket to override </p>
+
+    <ul class="list">
+	    <div>
+	        <div class="header_container direct">
+	        	<i id="icon_plus" class="fa fa-plus-square-o"></i>
+	    		<i id="icon_minus" class="fa fa-minus-square-o" style="display: none"></i>
+	        	<strong>Lucky Direct</strong>
+	        	<div class="pull-right direct">
+	        		Operational
+	        	</div>
+	        </div>
+	        <div class="item_group">
+	        	
+	         	<div class=item_container>
+	            	Boris
+	            	<div class="pull-right direct1">
+	        			<select id="status">
+						    <option style="color:#7ED321;" value='Operational'>Operational</option>
+						    <option style="color:rgb(52, 152, 219);" value='Under Maintenance'>Under Maintenance</option>
+						    <option style="color:rgb(241, 196, 15);" value='Degraded Performance'>Degraded Performance</option>
+						    <option style="color:#e67e22;" value='Partial Outage'>Partial Outage</option>
+						    <option style="color:rgb(231, 76, 60);" value='Major Outage'>Major Outage</option>
+						</select>
+	        		</div>
+	            </div>
+	            
+	            <div class=item_container>
+	            	LD Order Allocation
+	            	<div class="pull-right direct2">
+	        			<select id="status">
+						    <option style="color:#7ED321;" value='Operational'>Operational</option>
+						    <option style="color:rgb(52, 152, 219);" value='Under Maintenance'>Under Maintenance</option>
+						    <option style="color:rgb(241, 196, 15);" value='Degraded Performance'>Degraded Performance</option>
+						    <option style="color:#e67e22;" value='Partial Outage'>Partial Outage</option>
+						    <option style="color:rgb(231, 76, 60);" value='Major Outage'>Major Outage</option>
+						</select>
+	        		</div>
+	            </div>
+	          
+	            <div class=item_container>
+	            	In Store Pickup
+	            	<div class="pull-right direct3">
+	        			<select id="status">
+						    <option style="color:#7ED321;" value='Operational'>Operational</option>
+						    <option style="color:rgb(52, 152, 219);" value='Under Maintenance'>Under Maintenance</option>
+						    <option style="color:rgb(241, 196, 15);" value='Degraded Performance'>Degraded Performance</option>
+						    <option style="color:#e67e22;" value='Partial Outage'>Partial Outage</option>
+						    <option style="color:rgb(231, 76, 60);" value='Major Outage'>Major Outage</option>
+						</select>
+	        		</div>
+	            </div>
+	        </div>                
+	    </div>
+	</ul>
+
+	<ul class="list">
+	    <div>
+	        <div class="header_container sale">
+	        	<i id="icon_plus" class="fa fa-plus-square-o"></i>
+	    		<i id="icon_minus" class="fa fa-minus-square-o" style="display: none"></i>
+	        	<strong>Point of Sale Systems</strong>
+	        	<div class="pull-right sale">
+	        		Operational
+	        	</div>
+	        </div>
+	        <div class="item_group">
+	        	
+	            <div class=item_container>
+	            	MiStore Devices
+	            	<div class="pull-right sale1">
+	        			<select id="status">
+						    <option style="color:#7ED321;" value='Operational'>Operational</option>
+						    <option style="color:rgb(52, 152, 219);" value='Under Maintenance'>Under Maintenance</option>
+						    <option style="color:rgb(241, 196, 15);" value='Degraded Performance'>Degraded Performance</option>
+						    <option style="color:#e67e22;" value='Partial Outage'>Partial Outage</option>
+						    <option style="color:rgb(231, 76, 60);" value='Major Outage'>Major Outage</option>
+						</select>
+	        		</div>
+	            </div>
+	            
+	            <div class=item_container>
+	            	Promotions
+	            	<div class="pull-right sale2">
+	        			<select id="status">
+						    <option style="color:#7ED321;" value='Operational'>Operational</option>
+						    <option style="color:rgb(52, 152, 219);" value='Under Maintenance'>Under Maintenance</option>
+						    <option style="color:rgb(241, 196, 15);" value='Degraded Performance'>Degraded Performance</option>
+						    <option style="color:#e67e22;" value='Partial Outage'>Partial Outage</option>
+						    <option style="color:rgb(231, 76, 60);" value='Major Outage'>Major Outage</option>
+						</select>
+	        		</div>
+	            </div>
+	          
+	            <div class=item_container>
+	            	Pricing
+	            	<div class="pull-right sale3">
+	        			<select id="status">
+						    <option style="color:#7ED321;" value='Operational'>Operational</option>
+						    <option style="color:rgb(52, 152, 219);" value='Under Maintenance'>Under Maintenance</option>
+						    <option style="color:rgb(241, 196, 15);" value='Degraded Performance'>Degraded Performance</option>
+						    <option style="color:#e67e22;" value='Partial Outage'>Partial Outage</option>
+						    <option style="color:rgb(231, 76, 60);" value='Major Outage'>Major Outage</option>
+						</select>
+	        		</div>
+	            </div>
+	        </div>                
+	    </div>
+	</ul>
+
+	<ul class="list">
+	    <div>
+	        <div class="header_container sale">
+	        	<i id="icon_plus" class="fa fa-plus-square-o"></i>
+	    		<i id="icon_minus" class="fa fa-minus-square-o" style="display: none"></i>
+	        	<strong>Ecommerce</strong>
+	        	<div class="pull-right ecom">
+	        		Operational
+	        	</div>
+	        </div>
+	        <div class="item_group">
+	        	
+	            <div class=item_container>
+	            	Ecommerce Systems
+	            	<div class="pull-right ecom1">
+	        			<select id="status">
+						    <option style="color:#7ED321;" value='Operational'>Operational</option>
+						    <option style="color:rgb(52, 152, 219);" value='Under Maintenance'>Under Maintenance</option>
+						    <option style="color:rgb(241, 196, 15);" value='Degraded Performance'>Degraded Performance</option>
+						    <option style="color:#e67e22;" value='Partial Outage'>Partial Outage</option>
+						    <option style="color:rgb(231, 76, 60);" value='Major Outage'>Major Outage</option>
+						</select>
+	        		</div>
+	            </div>
+
+	            <div class=item_container>
+	            	Orders & Order Statuses
+	            	<div class="pull-right ecom2">
+	        			<select id="status">
+						    <option style="color:#7ED321;" value='Operational'>Operational</option>
+						    <option style="color:rgb(52, 152, 219);" value='Under Maintenance'>Under Maintenance</option>
+						    <option style="color:rgb(241, 196, 15);" value='Degraded Performance'>Degraded Performance</option>
+						    <option style="color:#e67e22;" value='Partial Outage'>Partial Outage</option>
+						    <option style="color:rgb(231, 76, 60);" value='Major Outage'>Major Outage</option>
+						</select>
+	        		</div>
+	            </div>
+
+	            <div class=item_container>
+	            	www.LuckyBrand.com
+	            	<div class="pull-right ecom3">
+	        			<select id="status">
+						    <option style="color:#7ED321;" value='Operational'>Operational</option>
+						    <option style="color:rgb(52, 152, 219);" value='Under Maintenance'>Under Maintenance</option>
+						    <option style="color:rgb(241, 196, 15);" value='Degraded Performance'>Degraded Performance</option>
+						    <option style="color:#e67e22;" value='Partial Outage'>Partial Outage</option>
+						    <option style="color:rgb(231, 76, 60);" value='Major Outage'>Major Outage</option>
+						</select>
+	        		</div>
+	            </div>
+	        </div>                
+	    </div>
+	</ul>
+
+	<ul class="list">
+	    <div>
+	        <div class="header_container sale">
+	        	<i id="icon_plus" class="fa fa-plus-square-o"></i>
+	    		<i id="icon_minus" class="fa fa-minus-square-o" style="display: none"></i>
+	        	<strong>Corporate Systems</strong>
+	        	<div class="pull-right corp">
+	        		Operational
+	        	</div>
+	        </div>
+	        <div class="item_group">
+	        	
+	            <div class=item_container>
+	            	Manhattan Molecule
+	            	<div class="pull-right corp1">
+	        			<select id="status">
+						    <option style="color:#7ED321;" value='Operational'>Operational</option>
+						    <option style="color:rgb(52, 152, 219);" value='Under Maintenance'>Under Maintenance</option>
+						    <option style="color:rgb(241, 196, 15);" value='Degraded Performance'>Degraded Performance</option>
+						    <option style="color:#e67e22;" value='Partial Outage'>Partial Outage</option>
+						    <option style="color:rgb(231, 76, 60);" value='Major Outage'>Major Outage</option>
+						</select>
+	        		</div>
+	            </div>
+
+	            <div class=item_container>
+	            	ASN's to GSI
+	            	<div class="pull-right corp2">
+	        			<select id="status">
+						    <option style="color:#7ED321;" value='Operational'>Operational</option>
+						    <option style="color:rgb(52, 152, 219);" value='Under Maintenance'>Under Maintenance</option>
+						    <option style="color:rgb(241, 196, 15);" value='Degraded Performance'>Degraded Performance</option>
+						    <option style="color:#e67e22;" value='Partial Outage'>Partial Outage</option>
+						    <option style="color:rgb(231, 76, 60);" value='Major Outage'>Major Outage</option>
+						</select>
+	        		</div>
+	            </div>
+	        </div>                
+	    </div>
+	</ul>
+
+		<input type="submit" value="Save System Statuses" class="btn btn-navy btn-border-o" onclick="saveStatus()">
+
+</section>
+
+<style> 
+	ul div .item_group {
+	    display: none;
+	} 
+</style>
+
+<script>
+
+	function determineColor(item) {
+		var val = item.val();
+
+		var good = "Operational";
+		var partial = "Partial Outage";
+		var maint = "Under Maintenance";
+		var degraded = "Degraded Performance";
+		var major = "Major Outage";
+		
+		if(val == good) {
+			item.css('color', '#7ED321');
+		} else if(val == major) {
+			item.css('color', "rgb(231, 76, 60)");
+		} else if(val == partial) {
+			item.css('color', '#e67e22');
+		} else if(val == degraded) {
+			item.css('color', 'rgb(241, 196, 15)');
+		} else if(val == maint) {
+			item.css('color', "rgb(52, 152, 219)");
+		}
+	}
+
+	// Retrieve saved data
+	function getStatus() {
+		var xhr = new XMLHttpRequest();
+	                
+	    xhr.open("GET", "http://66.80.179.115:9090/ws/rest/status/GetStatuses;boomi_auth=bHVja3licmFuZC1OQTJVWUM6MTkyYWQxMTItZTNlOC00YmViLTliMDItMjlmMzMyNTQ5Yzg5", true);
+
+	    xhr.addEventListener("readystatechange", function () {
+	   		if (this.readyState === 4) {
+	        	if(this.status == 200) { // When its successful
+	        		var data = this.responseText;
+	            	console.log(data);
+	            	var parser = new DOMParser();
+	            	var xmlDoc = parser.parseFromString(data, "application/xml");
+	          
+	            	// Gets the status from normal page here TODO
+					$(".pull-right.direct1 #status").val(xmlDoc.getElementsByTagName("ns1:direct1")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.direct1 #status"));
+					$(".pull-right.direct2 #status").val(xmlDoc.getElementsByTagName("ns1:direct2")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.direct2 #status"));
+					$(".pull-right.direct3 #status").val(xmlDoc.getElementsByTagName("ns1:direct3")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.direct3 #status"));
+					$(".pull-right.sale1 #status").val(xmlDoc.getElementsByTagName("ns1:sale1")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.sale1 #status"));
+					$(".pull-right.sale2 #status").val(xmlDoc.getElementsByTagName("ns1:sale2")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.sale2 #status"));
+					$(".pull-right.sale3 #status").val(xmlDoc.getElementsByTagName("ns1:sale3")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.sale3 #status"));
+					$(".pull-right.ecom1 #status").val(xmlDoc.getElementsByTagName("ns1:ecom1")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.ecom1 #status"));
+					$(".pull-right.ecom2 #status").val(xmlDoc.getElementsByTagName("ns1:ecom2")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.ecom2 #status"));
+					$(".pull-right.ecom3 #status").val(xmlDoc.getElementsByTagName("ns1:ecom3")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.ecom3 #status"));
+					$(".pull-right.corp1 #status").val(xmlDoc.getElementsByTagName("ns1:corp1")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.corp1 #status"));
+					$(".pull-right.corp2 #status").val(xmlDoc.getElementsByTagName("ns1:corp2")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.corp2 #status"));
+
+					statusLuckyDirect();
+					statusEcom();
+					statusCorp();
+					statusPOS();
+	        	} else {
+	            	console.log("Failure: " + this.status);
+	             	// Print a message saying not successful, and tell them to retry
+	         	}
+	    	}
+	    });
+
+	    xhr.send(null);
+	}
+	getStatus();
+
+
+
+
+	// Called when save status button is pressed
+	function saveStatus() {
+
+		var direct1 = $(".pull-right.direct1 #status").val().trim();
+		var direct2 = $(".pull-right.direct2 #status").val().trim();
+		var direct3 = $(".pull-right.direct3 #status").val().trim();
+		var sale1 = $(".pull-right.sale1 #status").val().trim();
+		var sale2 = $(".pull-right.sale2 #status").val().trim();
+		var sale3 = $(".pull-right.sale3 #status").val().trim();
+		var ecom1 = $(".pull-right.ecom1 #status").val().trim();
+		var ecom2 = $(".pull-right.ecom2 #status").val().trim();
+		var ecom3 = $(".pull-right.ecom3 #status").val().trim();
+		var corp1 = $(".pull-right.corp1 #status").val().trim();
+		var corp2 = $(".pull-right.corp2 #status").val().trim();
+
+		var data = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n\t<StatusInfo xmlns=\"StatusInfoXML\">\r\n\t\t<direct1>"+direct1+"</direct1>\r\n\t\t<direct2>"+direct2+"</direct2>\r\n\t\t<direct3>"+direct3+"</direct3>\r\n\t\t<sale1>"+sale1+"</sale1>\r\n\t\t<sale2>"+sale2+"</sale2>\r\n\t\t<sale3>"+sale3+"</sale3>\r\n\t\t<ecom1>"+ecom1+"</ecom1>\r\n\t\t<ecom2>"+ecom2+"</ecom2>\r\n\t\t<ecom3>"+ecom3+"</ecom3>\r\n\t\t<corp1>"+corp1+"</corp1>\r\n\t\t<corp2>"+corp2+"</corp2>\r\n\t</StatusInfo>";
+		console.log(data);
+
+		var xhr = new XMLHttpRequest();
+
+		xhr.addEventListener("readystatechange", function () {
+			if (this.readyState === 4 && this.status == 200) {
+			  	console.log(this.responseText);
+			    window.location.href = "index.html";
+			}
+		});
+
+		xhr.open("POST", "http://66.80.179.115:9090/ws/rest/status/UpdateStatus;boomi_auth=bHVja3licmFuZC1OQTJVWUM6MTkyYWQxMTItZTNlOC00YmViLTliMDItMjlmMzMyNTQ5Yzg5", true);
+		
+		xhr.send(data);
+	}
+
+
+
+	// Updates when option changes
+	$("select").change(function() {
+		statusLuckyDirect();
+		statusPOS();
+		statusEcom();
+		statusCorp();
+
+		determineColor($(".pull-right.direct1 #status"));
+		determineColor($(".pull-right.direct2 #status"));
+		determineColor($(".pull-right.direct3 #status"));
+		determineColor($(".pull-right.sale1 #status"));
+		determineColor($(".pull-right.sale2 #status"));
+		determineColor($(".pull-right.sale3 #status"));
+		determineColor($(".pull-right.ecom1 #status"));
+		determineColor($(".pull-right.ecom2 #status"));
+		determineColor($(".pull-right.ecom3 #status"));
+		determineColor($(".pull-right.corp1 #status"));
+		determineColor($(".pull-right.corp2 #status"));
+	});
+
+
+	$('.list > div .header_container').click(function() {
+	    $(this).parent().find('.item_group').toggle();
+	    $(this).parent().find("#icon_plus").toggle();
+	    $(this).parent().find("#icon_minus").toggle();
+
+	});
+
+	function statusLuckyDirect() {
+		var good = "Operational";
+		var partial = "Partial Outage";
+		var maint = "Under Maintenance";
+		var degraded = "Degraded Performance";
+		var major = "Major Outage";
+
+		var row1 = $(".pull-right.direct1 #status").val().trim();
+		var row2 = $(".pull-right.direct2 #status").val().trim();
+		var row3 = $(".pull-right.direct3 #status").val().trim();
+
+		// The status ladder, strongest status first
+		if(row2 == major || row1 == major || row3 == major) {
+			$(".pull-right.direct").text(major);
+			$(".pull-right.direct").css('color', "rgb(231, 76, 60)");
+		} else if(row2 == partial || row1 == partial || row3 == partial) {
+			$(".pull-right.direct").text(partial);
+			$(".pull-right.direct").css('color', '#e67e22');
+		} else if(row2 == degraded || row1 == degraded || row3 == degraded) {
+			$(".pull-right.direct").text(degraded);
+			$(".pull-right.direct").css('color', 'rgb(241, 196, 15)');
+		} else if(row2 == maint || row1 == maint || row3 == maint) {
+			$(".pull-right.direct").text(maint);
+			$(".pull-right.direct").css('color', "rgb(52, 152, 219)");
+		} else if(row2 == good && row1 == good && row3 == good) {
+			$(".pull-right.direct").text(good);
+			$(".pull-right.direct").css('color', '#7ED321');
+		}
+	}
+
+	function statusPOS() {
+		var good = "Operational";
+		var partial = "Partial Outage";
+		var maint = "Under Maintenance";
+		var degraded = "Degraded Performance";
+		var major = "Major Outage";
+
+		var row1 = $(".pull-right.sale1 #status").val().trim();
+		var row2 = $(".pull-right.sale2 #status").val().trim();
+		var row3 = $(".pull-right.sale3 #status").val().trim();
+
+		// The status ladder, strongest status first
+		if(row2 == major || row1 == major || row3 == major) {
+			$(".pull-right.sale").text(major);
+			$(".pull-right.sale").css('color', "rgb(231, 76, 60)");
+		} else if(row2 == partial || row1 == partial || row3 == partial) {
+			$(".pull-right.sale").text(partial);
+			$(".pull-right.sale").css('color', '#e67e22');
+		} else if(row2 == degraded || row1 == degraded || row3 == degraded) {
+			$(".pull-right.sale").text(degraded);
+			$(".pull-right.sale").css('color', 'rgb(241, 196, 15)');
+		} else if(row2 == maint || row1 == maint || row3 == maint) {
+			$(".pull-right.sale").text(maint);
+			$(".pull-right.sale").css('color', "rgb(52, 152, 219)");
+		} else if(row2 == good && row1 == good && row3 == good) {
+			$(".pull-right.sale").text(good);
+			$(".pull-right.sale").css('color', '#7ED321');
+		}
+	}
+
+	function statusEcom() {
+		var good = "Operational";
+		var partial = "Partial Outage";
+		var maint = "Under Maintenance";
+		var degraded = "Degraded Performance";
+		var major = "Major Outage";
+
+		var row1 = $(".pull-right.ecom1 #status").val().trim();
+		var row2 = $(".pull-right.ecom2 #status").val().trim();
+		var row3 = $(".pull-right.ecom3 #status").val().trim();
+
+		// The status ladder, strongest status first
+		if(row2 == major || row1 == major || row3 == major) {
+			$(".pull-right.ecom").text(major);
+			$(".pull-right.ecom").css('color', "rgb(231, 76, 60)");
+		} else if(row2 == partial || row1 == partial || row3 == partial) {
+			$(".pull-right.ecom").text(partial);
+			$(".pull-right.ecom").css('color', '#e67e22');
+		} else if(row2 == degraded || row1 == degraded || row3 == degraded) {
+			$(".pull-right.ecom").text(degraded);
+			$(".pull-right.ecom").css('color', 'rgb(241, 196, 15)');
+		} else if(row2 == maint || row1 == maint || row3 == maint) {
+			$(".pull-right.ecom").text(maint);
+			$(".pull-right.ecom").css('color', "rgb(52, 152, 219)");
+		} else if(row2 == good && row1 == good && row3 == good) {
+			$(".pull-right.ecom").text(good);
+			$(".pull-right.ecom").css('color', '#7ED321');
+		}
+	}
+
+	function statusCorp() {
+		var good = "Operational";
+		var partial = "Partial Outage";
+		var maint = "Under Maintenance";
+		var degraded = "Degraded Performance";
+		var major = "Major Outage";
+
+		var row1 = $(".pull-right.corp1 #status").val().trim();
+		var row2 = $(".pull-right.corp2 #status").val().trim();
+
+		// The status ladder, strongest status first
+		if(row2 == major || row1 == major) {
+			$(".pull-right.corp").text(major);
+			$(".pull-right.corp").css('color', "rgb(231, 76, 60)");
+		} else if(row2 == partial || row1 == partial) {
+			$(".pull-right.corp").text(partial);
+			$(".pull-right.corp").css('color', '#e67e22');
+		} else if(row2 == degraded || row1 == degraded) {
+			$(".pull-right.corp").text(degraded);
+			$(".pull-right.corp").css('color', 'rgb(241, 196, 15)');
+		} else if(row2 == maint || row1 == maint) {
+			$(".pull-right.corp").text(maint);
+			$(".pull-right.corp").css('color', "rgb(52, 152, 219)");
+		} else if(row2 == good && row1 == good) {
+			$(".pull-right.corp").text(good);
+			$(".pull-right.corp").css('color', '#7ED321');
+		}
+	}
+
+	
+
+</script>
+
+</body>
+</html>

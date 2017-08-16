@@ -15,6 +15,7 @@
 
 <section>
 	<h1 class="section-header"> System Statuses </h1>
+	<p> NOTE: Under Maintenance: Is set by a Critical TIcket or Manually set by administrator </p>
 	<form action="AddTicket.html">
 		<input type="submit" value="Create a Ticket" class="btn btn-navy btn-border-o">
  	</form>
@@ -155,7 +156,9 @@
 	        </div>                
 	    </div>
 	</ul>
-
+	<form action="edit.html">
+		<input type="submit" value="Edit System Statuses" class="btn btn-navy btn-border-o">
+	</form>
 </section>
 
 
@@ -196,6 +199,46 @@
 
 	});
 
+
+
+	function determineColor(item) {
+		var val = item.text().trim();
+
+		var good = "Operational";
+		var partial = "Partial Outage";
+		var maint = "Under Maintenance";
+		var degraded = "Degraded Performance";
+		var major = "Major Outage";
+		
+		if(val == good) {
+			item.css('color', '#7ED321');
+		} else if(val == major) {
+			item.css('color', "rgb(231, 76, 60)");
+		} else if(val == partial) {
+			item.css('color', '#e67e22');
+		} else if(val == degraded) {
+			item.css('color', 'rgb(241, 196, 15)');
+		} else if(val == maint) {
+			item.css('color', "rgb(52, 152, 219)");
+		}
+	}
+
+	// Gets the status from edit page here TODO
+	determineColor($(".pull-right.direct1"));
+	determineColor($(".pull-right.direct2"));
+	determineColor($(".pull-right.direct3"));
+	determineColor($(".pull-right.sale1"));
+	determineColor($(".pull-right.sale2"));
+	determineColor($(".pull-right.sale3"));
+	determineColor($(".pull-right.ecom1"));
+	determineColor($(".pull-right.ecom2"));
+	determineColor($(".pull-right.ecom3"));
+	determineColor($(".pull-right.corp1"));
+	determineColor($(".pull-right.corp2"));
+
+
+
+	// For updating the Catagory header
 	function statusLuckyDirect() {
 		var good = "Operational";
 		var partial = "Partial Outage";
@@ -203,104 +246,203 @@
 		var degraded = "Degraded Performance";
 		var major = "Major Outage";
 
-		var boris = $(".pull-right.direct1").text().trim();
-		console.log(boris);
-		var LD = $(".pull-right.direct2").text().trim();
-		var inStore = $(".pull-right.direct3").text().trim();
+		var row1 = $(".pull-right.direct1").text().trim();
+		var row2 = $(".pull-right.direct2").text().trim();
+		var row3 = $(".pull-right.direct3").text().trim();
 
-		if(LD == good && boris == good && inStore == good) {
+		// The status ladder, strongest status first
+		if(row2 == major || row1 == major || row3 == major) {
+			$(".pull-right.direct").text(major);
+			$(".pull-right.direct").css('color', "rgb(231, 76, 60)");
+		} else if(row2 == partial || row1 == partial || row3 == partial) {
+			$(".pull-right.direct").text(partial);
+			$(".pull-right.direct").css('color', '#e67e22');
+		} else if(row2 == degraded || row1 == degraded || row3 == degraded) {
+			$(".pull-right.direct").text(degraded);
+			$(".pull-right.direct").css('color', 'rgb(241, 196, 15)');
+		} else if(row2 == maint || row1 == maint || row3 == maint) {
+			$(".pull-right.direct").text(maint);
+			$(".pull-right.direct").css('color', "rgb(52, 152, 219)");
+		} else if(row2 == good && row1 == good && row3 == good) {
 			$(".pull-right.direct").text(good);
 			$(".pull-right.direct").css('color', '#7ED321');
 		}
-		else if(LD == partial || boris == partial || inStore == partial) {
-			$(".pull-right.direct").text(partial);
-			$(".pull-right.direct").css('color', '#e67e22');
-		}
 	}
+	statusLuckyDirect();
 
 	function statusPOS() {
 		var good = "Operational";
 		var partial = "Partial Outage";
+		var maint = "Under Maintenance";
+		var degraded = "Degraded Performance";
+		var major = "Major Outage";
 
-		var boris = $(".pull-right.sale1").text().trim();
-		var LD = $(".pull-right.sale2").text().trim();
-		var inStore = $(".pull-right.sale3").text().trim();
+		var row1 = $(".pull-right.sale1").text().trim();
+		var row2 = $(".pull-right.sale2").text().trim();
+		var row3 = $(".pull-right.sale3").text().trim();
 
-		if(LD == good && boris == good && inStore == good) {
+		// The status ladder, strongest status first
+		if(row2 == major || row1 == major || row3 == major) {
+			$(".pull-right.sale").text(major);
+			$(".pull-right.sale").css('color', "rgb(231, 76, 60)");
+		} else if(row2 == partial || row1 == partial || row3 == partial) {
+			$(".pull-right.sale").text(partial);
+			$(".pull-right.sale").css('color', '#e67e22');
+		} else if(row2 == degraded || row1 == degraded || row3 == degraded) {
+			$(".pull-right.sale").text(degraded);
+			$(".pull-right.sale").css('color', 'rgb(241, 196, 15)');
+		} else if(row2 == maint || row1 == maint || row3 == maint) {
+			$(".pull-right.sale").text(maint);
+			$(".pull-right.sale").css('color', "rgb(52, 152, 219)");
+		} else if(row2 == good && row1 == good && row3 == good) {
 			$(".pull-right.sale").text(good);
 			$(".pull-right.sale").css('color', '#7ED321');
 		}
-		else if(LD == partial || boris == partial || inStore == partial) {
-			$(".pull-right.sale").text(partial);
-			$(".pull-right.sale").css('color', '#e67e22');
-		}
 	}
+	statusPOS();
 
 	function statusEcom() {
 		var good = "Operational";
 		var partial = "Partial Outage";
+		var maint = "Under Maintenance";
+		var degraded = "Degraded Performance";
+		var major = "Major Outage";
 
-		var boris = $(".pull-right.ecom1").text().trim();
-		var LD = $(".pull-right.ecom2").text().trim();
-		var inStore = $(".pull-right.ecom3").text().trim();
+		var row1 = $(".pull-right.ecom1").text().trim();
+		var row2 = $(".pull-right.ecom2").text().trim();
+		var row3 = $(".pull-right.ecom3").text().trim();
 
-		if(LD == good && boris == good && inStore == good) {
+		// The status ladder, strongest status first
+		if(row2 == major || row1 == major || row3 == major) {
+			$(".pull-right.ecom").text(major);
+			$(".pull-right.ecom").css('color', "rgb(231, 76, 60)");
+		} else if(row2 == partial || row1 == partial || row3 == partial) {
+			$(".pull-right.ecom").text(partial);
+			$(".pull-right.ecom").css('color', '#e67e22');
+		} else if(row2 == degraded || row1 == degraded || row3 == degraded) {
+			$(".pull-right.ecom").text(degraded);
+			$(".pull-right.ecom").css('color', 'rgb(241, 196, 15)');
+		} else if(row2 == maint || row1 == maint || row3 == maint) {
+			$(".pull-right.ecom").text(maint);
+			$(".pull-right.ecom").css('color', "rgb(52, 152, 219)");
+		} else if(row2 == good && row1 == good && row3 == good) {
 			$(".pull-right.ecom").text(good);
 			$(".pull-right.ecom").css('color', '#7ED321');
 		}
-		else if(LD == partial || boris == partial || inStore == partial) {
-			$(".pull-right.ecom").text(partial);
-			$(".pull-right.ecom").css('color', '#e67e22');
-		}
 	}
+	statusEcom();
 
 	function statusCorp() {
 		var good = "Operational";
 		var partial = "Partial Outage";
+		var maint = "Under Maintenance";
+		var degraded = "Degraded Performance";
+		var major = "Major Outage";
 
-		var boris = $(".pull-right.corp1").text().trim();
-		var LD = $(".pull-right.corp2").text().trim();
-		var inStore = $(".pull-right.corp3").text().trim();
+		var row1 = $(".pull-right.corp1").text().trim();
+		var row2 = $(".pull-right.corp2").text().trim();
 
-		if(LD == good && boris == good && inStore == good) {
+		// The status ladder, strongest status first
+		if(row2 == major || row1 == major) {
+			$(".pull-right.corp").text(major);
+			$(".pull-right.corp").css('color', "rgb(231, 76, 60)");
+		} else if(row2 == partial || row1 == partial) {
+			$(".pull-right.corp").text(partial);
+			$(".pull-right.corp").css('color', '#e67e22');
+		} else if(row2 == degraded || row1 == degraded) {
+			$(".pull-right.corp").text(degraded);
+			$(".pull-right.corp").css('color', 'rgb(241, 196, 15)');
+		} else if(row2 == maint || row1 == maint) {
+			$(".pull-right.corp").text(maint);
+			$(".pull-right.corp").css('color', "rgb(52, 152, 219)");
+		} else if(row2 == good && row1 == good) {
 			$(".pull-right.corp").text(good);
 			$(".pull-right.corp").css('color', '#7ED321');
 		}
-		else if(LD == partial || boris == partial || inStore == partial) {
-			$(".pull-right.corp").text(partial);
-			$(".pull-right.corp").css('color', '#e67e22');
-		}
 	}
+	statusCorp();
 
-	var object;
-	var table1 = $(".OpsGenie");
+	// var object;
+	// var table1 = $(".OpsGenie");
 
-	function getStatus(acknowledged) {
-		if(acknowledged == false) {
-			return "Open";
-		} else {
-			return "Ack'ed";
-		}
+	// function getStatus(acknowledged) {
+	// 	if(acknowledged == false) {
+	// 		return "Open";
+	// 	} else {
+	// 		return "Ack'ed";
+	// 	}
+	// }
+
+	// function alertType(message, i) {
+	// 	if((message.indexOf("Critical alert:")) != -1) {
+	// 		$("#row"+i).css('background-color','#b01801');
+	// 	} else if(message.indexOf("Medium alert:") != -1) {
+	// 		$("#row"+i).css('background-color', '#ffb027');
+	// 	} else if(message.indexOf("Low alert:") != -1) {
+	// 		$("#row"+i).css('background-color', '#59ad19');
+	// 	} else {
+	// 		$("#row"+i).css('background', '-webkit-linear-gradient(left, #25c481, #25b7c4)');
+	// 		$("#row"+i).css('background', 'linear-gradient(to right, #25c481, #25b7c4)');
+	// 	}
+	// }
+	// function addRow(i) {
+	// 	return "row"+i;
+	// }
+
+	// Retrieve saved data
+	function getStatus() {
+		var xhr = new XMLHttpRequest();
+	                
+	    xhr.open("GET", "http://66.80.179.115:9090/ws/rest/status/GetStatuses;boomi_auth=bHVja3licmFuZC1OQTJVWUM6MTkyYWQxMTItZTNlOC00YmViLTliMDItMjlmMzMyNTQ5Yzg5", true);
+
+	    xhr.addEventListener("readystatechange", function () {
+	   		if (this.readyState === 4) {
+	        	if(this.status == 200) { // When its successful
+	        		var data = this.responseText;
+	            	console.log(data);
+	            	var parser = new DOMParser();
+	            	var xmlDoc = parser.parseFromString(data, "application/xml");
+
+	            	// Gets the status from normal page here TODO
+					$(".pull-right.direct1").text(xmlDoc.getElementsByTagName("ns1:direct1")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.direct1"));
+					$(".pull-right.direct2").text(xmlDoc.getElementsByTagName("ns1:direct2")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.direct2"));
+					$(".pull-right.direct3").text(xmlDoc.getElementsByTagName("ns1:direct3")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.direct3"));
+					$(".pull-right.sale1").text(xmlDoc.getElementsByTagName("ns1:sale1")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.sale1"));
+					$(".pull-right.sale2").text(xmlDoc.getElementsByTagName("ns1:sale2")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.sale2"));
+					$(".pull-right.sale3").text(xmlDoc.getElementsByTagName("ns1:sale3")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.sale3"));
+					$(".pull-right.ecom1").text(xmlDoc.getElementsByTagName("ns1:ecom1")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.ecom1"));
+					$(".pull-right.ecom2").text(xmlDoc.getElementsByTagName("ns1:ecom2")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.ecom2"));
+					$(".pull-right.ecom3").text(xmlDoc.getElementsByTagName("ns1:ecom3")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.ecom3"));
+					$(".pull-right.corp1").text(xmlDoc.getElementsByTagName("ns1:corp1")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.corp1"));
+					$(".pull-right.corp2").text(xmlDoc.getElementsByTagName("ns1:corp2")[0].childNodes[0].nodeValue);
+					determineColor($(".pull-right.corp2"));
+
+					statusLuckyDirect();
+					statusEcom();
+					statusCorp();
+					statusPOS();
+	        	} else {
+	            	console.log("Failure: " + this.status);
+	             	// Print a message saying not successful, and tell them to retry
+	         	}
+	    	}
+	    });
+
+	    xhr.send(null);
 	}
+	getStatus();
 
-	function alertType(message, i) {
-		if((message.indexOf("Critical alert:")) != -1) {
-			$("#row"+i).css('background-color','#b01801');
-		} else if(message.indexOf("Medium alert:") != -1) {
-			$("#row"+i).css('background-color', '#ffb027');
-		} else if(message.indexOf("Low alert:") != -1) {
-			$("#row"+i).css('background-color', '#59ad19');
-		} else {
-			$("#row"+i).css('background', '-webkit-linear-gradient(left, #25c481, #25b7c4)');
-			$("#row"+i).css('background', 'linear-gradient(to right, #25c481, #25b7c4)');
-		}
-	}
-
-	function addRow(i) {
-		return "row"+i;
-	}
-
-
+	// Check if there are criticals, if there are set the status to under Maintenance if its operational
 	function getCriticals() {
 		var xhr = new XMLHttpRequest();
 
@@ -363,6 +505,7 @@
 		  		statusPOS();
 		  		statusEcom();
 		  		statusCorp();
+		  		saveStatus();
 
 		  	} else {
 		  		console.log("Not successful status!");
@@ -375,14 +518,16 @@
 		xhr.send();
 	}
 
-
+	// Sets the status to Under Maintenace if its operational
 	function setStatuses(match, name, description, status) {
 
 		for(var i = 0; i < match.length; i++) {
 			if(name.indexOf(match[i]) != -1 || description.indexOf(match[i]) != -1) {
-				$(status).text("Partial Outage");
-				$(status).css('color', '#e67e22');
-				return true;
+				if($(status).text() != "Degraded Performance" &&  $(status).text() != "Partial Outage" && $(status).text() != "Major Outage") {
+					$(status).text("Under Maintenance");
+					$(status).css('color', 'rgb(52, 152, 219)');
+					return true;
+				}
 			}
 		}
 		return false;
@@ -390,40 +535,35 @@
 
 	getCriticals();
 
-	// function restCall() {
+	function saveStatus() {
 
-	// 	var xhr = new XMLHttpRequest();
+		var direct1 = $(".pull-right.direct1").text().trim();
+		var direct2 = $(".pull-right.direct2").text().trim();
+		var direct3 = $(".pull-right.direct3").text().trim();
+		var sale1 = $(".pull-right.sale1").text().trim();
+		var sale2 = $(".pull-right.sale2").text().trim();
+		var sale3 = $(".pull-right.sale3").text().trim();
+		var ecom1 = $(".pull-right.ecom1").text().trim();
+		var ecom2 = $(".pull-right.ecom2").text().trim();
+		var ecom3 = $(".pull-right.ecom3").text().trim();
+		var corp1 = $(".pull-right.corp1").text().trim();
+		var corp2 = $(".pull-right.corp2").text().trim();
 
-	// 	xhr.addEventListener("readystatechange", function () {
-	// 	  if (this.readyState === 4) {
-	// 	  	if(this.status == 200) {
-	// 	  		object = JSON.parse(this.responseText);
-	// 	  		console.log(object);
-	// 	  		var i = 0;
-	// 	  		for(let alert of object.alerts) {
-	// 	  			if(alert.owner != "") {
-	// 		  			var d = new Date(alert.createdAt/1000000);
-	// 		  			table1.append('<tr id='+addRow(i) +'><td class="message">'+alert.message+'</td><td>'+getStatus(alert.acknowledged)+'</td><td>'+alert.owner+'</td><td>'+alert.teams[0]+'</td><td>'+d+'</td></tr>');
-	// 		  			alertType(alert.message,i)
-	// 		  			i++;
-	// 		  		}
-	// 	  		}
-	// 	  	} else {
-	// 	  		console.log("Not successful status!");
-	// 	  	}
-	// 	  }
-	// 	});
+		var data = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n\t<StatusInfo xmlns=\"StatusInfoXML\">\r\n\t\t<direct1>"+direct1+"</direct1>\r\n\t\t<direct2>"+direct2+"</direct2>\r\n\t\t<direct3>"+direct3+"</direct3>\r\n\t\t<sale1>"+sale1+"</sale1>\r\n\t\t<sale2>"+sale2+"</sale2>\r\n\t\t<sale3>"+sale3+"</sale3>\r\n\t\t<ecom1>"+ecom1+"</ecom1>\r\n\t\t<ecom2>"+ecom2+"</ecom2>\r\n\t\t<ecom3>"+ecom3+"</ecom3>\r\n\t\t<corp1>"+corp1+"</corp1>\r\n\t\t<corp2>"+corp2+"</corp2>\r\n\t</StatusInfo>";
+		console.log(data);
 
-	// 	xhr.open("GET", "https://zawtqg3frl.execute-api.us-east-2.amazonaws.com/Test", true); // Original
+		var xhr = new XMLHttpRequest();
 
-	// 	//var key = "ec6761c0-3f5c-4a89-b8a6-d39e18f26fe5";
-	// 	//xhr.setRequestHeader('Authorization','GenieKey ' + key);
+		xhr.addEventListener("readystatechange", function () {
+			if (this.readyState === 4 && this.status == 200) {
+			  	console.log(this.responseText);
+			}
+		});
 
-	// 	//xhr.setRequestHeader("content-type", "text/xml");
-	// 	xhr.send();
-	// }
-
-	// restCall();
+		xhr.open("POST", "http://66.80.179.115:9090/ws/rest/status/UpdateStatus;boomi_auth=bHVja3licmFuZC1OQTJVWUM6MTkyYWQxMTItZTNlOC00YmViLTliMDItMjlmMzMyNTQ5Yzg5", true);
+		
+		xhr.send(data);
+	}
 
 </script>
 

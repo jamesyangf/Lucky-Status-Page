@@ -71,8 +71,9 @@ strong {
 
 .pull-right {
   float: right!important;
-  color: #7ED321;
 }
+
+#status
 
 /* For testing partial outage*/
 /*.pull-right.direct2 {
