@@ -73,7 +73,15 @@ strong {
   float: right!important;
 }
 
-#status
+.note {
+  font-family: 'Feijoa', serif;
+    margin: 0;
+    text-align: center;
+    color: #263449;
+    padding-bottom: 20px;
+    padding-top: 50px;
+    font-weight: 600;
+}
 
 /* For testing partial outage*/
 /*.pull-right.direct2 {
