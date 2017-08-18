@@ -6,7 +6,7 @@ var criticalIsClicked = false;
 
 $(".error_container").hide();
     
-    var match = ["Allocation", "allocation", "Alloc", "alloc"];
+    var match = ["Allocation", "allocation", "LD Order"];
 
     function restCall(url, divId) {
 

@@ -258,7 +258,7 @@
 	function getStatus() {
 		var xhr = new XMLHttpRequest();
 	                
-	    xhr.open("GET", "http://66.80.179.115:9090/ws/rest/status/GetStatuses;boomi_auth=bHVja3licmFuZC1OQTJVWUM6MTkyYWQxMTItZTNlOC00YmViLTliMDItMjlmMzMyNTQ5Yzg5", true);
+	    xhr.open("GET", "https://no79f0tvp3.execute-api.us-east-2.amazonaws.com/Test", true);
 
 	    xhr.addEventListener("readystatechange", function () {
 	   		if (this.readyState === 4) {
@@ -337,7 +337,7 @@
 			}
 		});
 
-		xhr.open("POST", "http://66.80.179.115:9090/ws/rest/status/UpdateStatus;boomi_auth=bHVja3licmFuZC1OQTJVWUM6MTkyYWQxMTItZTNlOC00YmViLTliMDItMjlmMzMyNTQ5Yzg5", true);
+		xhr.open("POST", "https://no79f0tvp3.execute-api.us-east-2.amazonaws.com/Test", true);
 		
 		xhr.send(data);
 	}
